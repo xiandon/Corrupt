@@ -124,6 +124,7 @@ public class PromptBoxDialog extends Dialog implements View.OnClickListener {
             if (listener != null) {
                 listener.onClick(this, true);
             }
+            this.dismiss();
 
         }
     }

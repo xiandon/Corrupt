@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.pen.wind.dialog.EnterDialog;
 import com.pen.wind.dialog.EnterTwoDialog;
+import com.pen.wind.dialog.PromptBoxDialog;
 import com.pen.wind.log.AndroidLogAdapter;
 import com.pen.wind.log.DonLogger;
 
@@ -31,7 +32,20 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_PromptDialog:
-                DonLogger.i("你好");
+                new PromptBoxDialog(this, R.style.PromptBoxDialog, "确定删除该信息吗？", new PromptBoxDialog.OnCloseListener() {
+                    @Override
+                    public void onClick(Dialog dialog, boolean confirm) {
+                        if (confirm) {
+                            Toast.makeText(MainActivity.this, "删除了", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "取消删除", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).setTitle("温馨提示").show();
+
+
+                break;
+            case R.id.btn_single_edit_dialog:
                 new EnterDialog(this, R.style.PromptBoxDialog, "请输入光照警戒值", new EnterDialog.OnCloseListener() {
                     @Override
                     public void onClick(Dialog dialog, boolean confirm, String editText) {
@@ -42,10 +56,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }).setTitle("温馨提醒").show();
-
-                break;
-            case R.id.btn_single_edit_dialog:
-                DonLogger.d("HHllOOO");
                 break;
             case R.id.btn_two_edit_dialog:
                 new EnterTwoDialog(this, R.style.PromptBoxDialog, "请输入最小值", "请输入最大值", new EnterTwoDialog.OnCloseListener() {
