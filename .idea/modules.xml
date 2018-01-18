@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Corrupt.iml" filepath="$PROJECT_DIR$/Corrupt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Corrupt.iml" filepath="$PROJECT_DIR$/Corrupt.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wind/wind.iml" filepath="$PROJECT_DIR$/wind/wind.iml" />
       <module fileurl="file://$PROJECT_DIR$/wind/wind.iml" filepath="$PROJECT_DIR$/wind/wind.iml" />
     </modules>
   </component>
