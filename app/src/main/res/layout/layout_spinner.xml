@@ -2,13 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
-    <Spinner
-        android:id="@+id/sp_spinner"
+    <com.pen.wind.custom.CustomThermometer
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/temperature"
+        custom:liquid_color="@color/white"
+        custom:crust_color="@color/white"
+        custom:crust_width="50dp"
+        custom:crust_height="400dp"
+        custom:init_temperature="0dp"/>
 
 
 </LinearLayout>

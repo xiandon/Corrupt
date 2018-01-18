@@ -1,6 +1,7 @@
 package com.pen.corrupt;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.btn_single_edit_dialog:
-                DonLogger.d("HHllOOO");
+                startActivity(new Intent(this, ActivitySpinner.class));
                 break;
             case R.id.btn_two_edit_dialog:
                 new EnterTwoDialog(this, R.style.PromptBoxDialog, "请输入最小值", "请输入最大值", new EnterTwoDialog.OnCloseListener() {
