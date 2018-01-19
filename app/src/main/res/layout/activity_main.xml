@@ -7,24 +7,18 @@
     android:padding="10dp"
     tools:context="com.pen.corrupt.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_PromptDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="提示框dialog" />
+        <com.pen.wind.custom.TempControlView
+            android:id="@+id/textTempControlView"
+            android:layout_width="260dp"
+            android:layout_height="260dp" />
 
-    <Button
-        android:id="@+id/btn_single_edit_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="单个输入框dialog" />
-
-    <Button
-        android:id="@+id/btn_two_edit_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="多个输入框dialog" />
+    </LinearLayout>
 
 
 </LinearLayout>
