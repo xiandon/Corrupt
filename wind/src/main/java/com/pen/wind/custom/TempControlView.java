@@ -48,11 +48,11 @@ public class TempControlView extends View {
     // 文本提示
     private String title = "最高温度设置";
     // 温度
-    private int temperature = 15;
+    private float temperature = 15;
     // 最低温度
-    private int minTemp = 15;
+    private float minTemp = 15;
     // 最高温度
-    private int maxTemp = 30;
+    private float maxTemp = 30;
     // 四格代表温度1度
     private int angleRate = 4;
     // 每格的角度
@@ -369,7 +369,7 @@ public class TempControlView extends View {
             rotateAngle = 270;
         }
         // 加上0.5是为了取整时四舍五入
-        temperature = (int) ((rotateAngle / angleOne) / angleRate + 0.5) + minTemp;
+        temperature = (float) (((rotateAngle / angleOne) / angleRate + 0.5) + minTemp);
     }
 
     /**
@@ -397,7 +397,7 @@ public class TempControlView extends View {
      * @param maxTemp 最大温度
      * @param temp    设置的温度
      */
-    public void setTemp(int minTemp, int maxTemp, int temp) {
+    public void setTemp(float minTemp, float maxTemp, int temp) {
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
         if (temp < minTemp) {
@@ -440,7 +440,7 @@ public class TempControlView extends View {
          *
          * @param temp 温度
          */
-        void change(int temp);
+        void change(float temp);
     }
 
     /**
@@ -452,7 +452,7 @@ public class TempControlView extends View {
          *
          * @param temp 温度
          */
-        void onClick(int temp);
+        void onClick(float temp);
     }
 
     public int dp2px(float dp) {
