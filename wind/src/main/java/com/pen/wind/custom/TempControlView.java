@@ -50,9 +50,9 @@ public class TempControlView extends View {
     // 温度
     private double temperature = 15;
     // 最低温度
-    private int minTemp = 15;
+    private int minTemp = 20;
     // 最高温度
-    private int maxTemp = 30;
+    private int maxTemp = 45;
     // 四格代表温度1度
     private int angleRate = 4;
     // 每格的角度
@@ -386,7 +386,7 @@ public class TempControlView extends View {
      *
      * @param temp 设置的温度
      */
-    public void setTemp(int temp) {
+    public void setTemp(double temp) {
         setTemp(minTemp, maxTemp, temp);
     }
 
